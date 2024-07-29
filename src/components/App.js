@@ -59,14 +59,7 @@ const App =()=> {
         }
        }
         
-       console.log(remaining1.length);
-       console.log(remaining1.join(''));
-
-       console.log(remaining2.join('middle'));
-
-       console.log(remaining2.join(''));
-       console.log((remaining2.length+remaining2.length));
-       console.log((remaining2.length+remaining2.length)%6);
+       
        setResult((remaining1.length+remaining2.length)%6);
         let leth =(remaining1.length+remaining2.length)%6;
        if(leth==0){
