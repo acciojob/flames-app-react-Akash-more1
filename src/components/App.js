@@ -84,11 +84,11 @@ const App =()=> {
     }
 
     const clear = ()=>{
-
-        let in1=document.getElementById("ik");
-        let in2=document.getElementById("il");
-        in1.value="";
-        in2.value="";
+        console.log("akash");
+        // let in1=document.getElementById("input1");
+        // let in2=document.getElementById("input2");
+        // in1.value="";
+        // in2.value="";
          setInput1("");
          setInput2("");
         setResult("");
@@ -97,11 +97,17 @@ const App =()=> {
 
         return(
             <div id="main">
-               <input id="ik" onChange={handleInput1}/>
-               <input id="il" onChange={handleInput2}/>
-               <button id="in" onClick={relCalulate}>Calculate Relationship Future</button>
-               <button id="io" onClick={clear}>Clear</button>
-               <h3>{result}</h3>
+               <input data-testid="input1" 
+                value={input1}
+                onChange={handleInput1}/>
+
+               <input data-testid="input2" 
+                value={input2}
+                onChange={handleInput2}/>
+
+               <button data-testid="calculate_relationship" onClick={relCalulate}>Calculate Relationship Future</button>
+               <button data-testid="clear" onClick={clear}>Clear</button>
+               <h3 data-testid="answer">{result}</h3>
             </div>
         )
     
