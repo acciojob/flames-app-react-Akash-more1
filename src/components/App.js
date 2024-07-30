@@ -16,7 +16,7 @@ const App =()=> {
 
     const relCalulate= ()=>{
 
-        if(input1=="" || input2==""){
+        if(input1==="" || input2===""){
             setResult("Please Enter valid input");
             return;
         }
@@ -38,7 +38,7 @@ const App =()=> {
        for(const char of input1){
         if(map2[char]){
             map2[char]--;
-            if(map2[char]== 0){
+            if(map2[char]=== 0){
                 delete map2[char];
             }
         }
@@ -50,7 +50,7 @@ const App =()=> {
        for(const char of input2){
         if(map1[char]){
             map1[char]--;
-            if(map1[char]== 0){
+            if(map1[char]=== 0){
                 delete map1[char];
             }
         }
@@ -60,27 +60,18 @@ const App =()=> {
        }
         
        
-       setResult((remaining1.length+remaining2.length)%6);
-        let leth =(remaining1.length+remaining2.length)%6;
-       if(leth==0){
-        setResult("Siblings");
-       }
-       else if(leth==1){
-        setResult("Friends");
-       }
-       else if(leth==2){
-        setResult("Love");
-       }
-       else if(leth==3){
-        setResult("Affection");
-       }
-       else if(leth==4){
-        setResult("Marriage");
-       }
-       else if(leth==5){
-        setResult("Enemy");
-       }
-
+       const remainingLength = remaining1.length + remaining2.length;
+        const leth = remainingLength % 6;
+        // console.log(remainingLength);
+        const relationshipStatuses = [
+            "Siblings",
+            "Friends",
+            "Love",
+            "Affection",
+            "Marriage",
+            "Enemy"
+        ];
+        setResult(relationshipStatuses[leth]);
     }
 
     const clear = ()=>{
