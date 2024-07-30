@@ -84,7 +84,7 @@ const App =()=> {
     }
 
     const clear = ()=>{
-        console.log("akash");
+        // console.log("akash");
         // let in1=document.getElementById("input1");
         // let in2=document.getElementById("input2");
         // in1.value="";
@@ -99,10 +99,12 @@ const App =()=> {
             <div id="main">
                <input data-testid="input1" 
                 value={input1}
+                placeholder="Enter first name"
                 onChange={handleInput1}/>
 
                <input data-testid="input2" 
                 value={input2}
+                placeholder="Enter second name"
                 onChange={handleInput2}/>
 
                <button data-testid="calculate_relationship" onClick={relCalulate}>Calculate Relationship Future</button>
