@@ -89,11 +89,13 @@ const App =()=> {
         return(
             <div id="main">
                <input data-testid="input1" 
+                name="name1"
                 value={input1}
                 placeholder="Enter first name"
                 onChange={handleInput1}/>
 
                <input data-testid="input2" 
+                name="name2"
                 value={input2}
                 placeholder="Enter second name"
                 onChange={handleInput2}/>
